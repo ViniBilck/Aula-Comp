@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--Aluno: Vinicius Lourival Bilck-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+    <body>
+    <header>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/Projeto - Vinicius L Bilck/Fourier.html">Simulação da série de Fourier</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button class="1" onclick="roda()">Simular</button><button class="B2" onclick="para()">Parar</button></a>
+    </header>
+    <center>
+        <div>
+            <p class="teste1">$$ \sum_{n=1,2,3...}^{N} \frac{1}{n} \sin(nt) $$ <input type="checkbox" name="op1" id="Op1" onclick="Escolha()" ></p>
+            <p class="teste1">$$ \sum_{n=1,3,5...}^{N} \frac{1}{n} \sin(nt)  $$ <input type="checkbox" name="op2"  id="Op2" onclick="Escolha()" ></p>
+            
+        </div>
+        <p class="teste1">Números de circulos |0 a 25|: <input type="range" id="Op3" name="vol" min="0" max="25"></p>
+    <div class="corpo" id="corpo">
+        <p style="text-align: center;">
+            <canvas id="tela" height="600px"; width= "1000px"; style="border: 1px solid #edf0f1;" ></canvas>
+        </p>
+
+        <script>
+            //Escolha
+            function Escolha(){
+                opc = 0;
+                if(document.getElementById("Op1").checked){
+                    opc = 1
+                }
+                if(document.getElementById("Op2").checked){
+                    opc = 2
+                }
+
+            }
+
+            //Desenhar - Animação
+            function Desenho(){
+                
+                ctx.clearRect(0,0, 1000, 600);
+                
+
+                //Legenda - Eixos
+                ctx.beginPath();
+                ctx.moveTo(25,150);
+                ctx.lineTo(25,450);
+                ctx.strokeStyle = "#edf0f117";
+                ctx.fillStyle = "#edf0f117";
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.moveTo(25,ch/2);
+                ctx.lineTo(975,ch/2);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(25,150);
+                ctx.lineTo(30,150);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(25,450);
+                ctx.lineTo(30,450);
+                ctx.stroke();
+
+                //Números
+                ctx.font = "13px Montserrat";
+                ctx.fillStyle = "#edf0f1";
+                ctx.fillText("1",25 ,148);
+                ctx.fillText("-1",20 ,461);
+                ctx.fillText("0",25 ,ch/2);
+                var x = Px_i;
+                var y = Py_i;
+                
+                //Física
+                var Ch_N = document.getElementById('Op3').value;
+                var Ch_N_real = parseInt(Ch_N);
+                if (opc==0){
+                    para();
+                }
+                for (i=0; i<Ch_N_real; i++){
+
+
+
+                    let x_Ant = x;
+                    let y_Ant = y;
+
+                    var n = (i*opc)+1;
+
+                    r = 150 * (1 / (n));
+                    x +=  - r * Math.cos(n * t)
+                    y += r * Math.sin(n * t)
+                    
+                    //circulo grande
+                    ctx.beginPath();
+                    ctx.ellipse(x_Ant, y_Ant, r, r, 0, 0, Math.PI * 2);
+                    ctx.strokeStyle = "#edf0f1";
+                    ctx.stroke(); 
+        
+                    
+                    //Particula
+                    ctx.beginPath();
+                    ctx.ellipse(x , y, 4, 4, 0, 0, Math.PI * 2);
+                    ctx.strokeStyle = "#edf0f1";
+                    ctx.fillStyle = "#519872";
+                    ctx.stroke();
+                    ctx.fill();
+                
+                }
+                
+                //Plot
+                ctx.beginPath();
+                Plot.unshift(y);
+                ctx.moveTo(x ,y );
+                for(j=0;j<Plot.length;j++){
+                    ctx.lineTo(j+400, Plot[j]);
+                    ctx.stroke();
+                }
+                
+                //Preciso excluir alguns pontos do vetor pra ele não travar o código.
+                //525 elementos no vetor é maximo projetado para o preview
+                if (Plot.length>525){
+                    Plot.pop();
+                }    
+                
+            }
+                    
+            //Animação
+            function here(){
+                Desenho();
+                t=t+dt
+            }
+
+            //Simular
+            function roda(){
+                K = setInterval("here()",dt_ms);
+
+            }
+
+            //Para a simulação 
+            function para(){
+                clearInterval(K);
+                ctx.clearRect(0,0, 1000, 600);
+                ctx.font = "30px Montserrat";
+                ctx.fillStyle = "#edf0f1";
+                ctx.textAlign = "center";
+                ctx.fillText("Simulação Interrompida, verifique a opção desejada",cw/2 ,ch/2)
+            }
+            
+            //Configurações
+            var cnv = document.getElementById("tela");
+            var ctx = cnv.getContext("2d");
+            var cw = cnv.width;
+            var ch = cnv.height;
+            var r = 115 * (4 / (1*Math.PI));
+            var Px_i = 200;
+            var Py_i = ch/2;
+            var t_ini = Date.now()
+            var Plot = [];
+            var t = 0 //iniciar plot na parte inferior
+            var dt_ms = 16.0;
+            var dt = dt_ms / 1000
+            var opc = 0;
+            
+            
+                        
+        </script>
+
+    </div>
+    <div class="footer">Aluno: Vinicius Lourival Bilck</div>
+    </center>
+    
+</body>
+</html>
