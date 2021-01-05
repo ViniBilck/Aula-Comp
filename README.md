@@ -1,2 +1,2 @@
-# Aula-Comp
-Exe de Comp
+# Exercicios de FSC7114
+Javascript e CSS
