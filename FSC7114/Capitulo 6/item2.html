@@ -1,0 +1,50 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função que pega o Raio e mostra o volumen da esfera
+                function volume(objeto,dim){
+                    if (objeto == "cubo"){
+                        vol = dim*dim*dim
+                    }
+                    if (objeto == "esfera"){
+                        var h=2; //Metros
+                        var vol = (4*Math.PI*dim*dim)/3;
+                    }
+                    
+                    return vol
+                }
+
+                //testando função 
+
+                var R = volume("cubo",5);                
+                document.write("Volume cubo com aresta 5: ", R , "<BR>")
+                var R1 = volume("esfera",5);                
+                document.write("Volume esfera com raio 5: ", R1.toPrecision(4))
+                
+
+                
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

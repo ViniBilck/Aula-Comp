@@ -1,0 +1,64 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+            }
+        .box {
+            height: 200px;
+            width: 500px;
+        }
+        body {
+            margin: 0px;
+        }
+
+    </style>
+    <head>
+        <title>Item 2</title>
+       
+    </head>
+    <body>
+        <div  class="container">    
+            <div class="box">
+                <script>
+                    //Aluno: Vinicius Lourival Bilck
+                    function N_Ale(min, max) {
+                        x = Math.random() * (max - min) + min;
+                        return parseInt(x);
+                    }
+                    var angG = N_Ale(30,60); //Graus
+                    var angR = angG*0.0174533; // Radianos
+                    var vel = N_Ale(5,15); // m/s
+                    var g = 9.8; // m/s²
+                    
+                    var vely = vel*Math.sin(angR);
+                    var velx = vel*Math.cos(angR);
+                    
+                    //Altura Max
+                    var H = (vely*vely)/(2*g);
+            
+                    //Alcance
+                    var S = velx*(2*vely/g);
+            
+                    //Tempo de voo
+                    var T = 2*(vely/g);
+            
+                    var str = "<p>Em um lançamento oblíquo, um projétil lançado a um ângulo de " +angG.toPrecision(3)+ " graus com \
+                        uma velocidade inicial de "+vel.toPrecision(3)+" m/s vai atingir uma altura máxima de "+H.toPrecision(3)+" m e terá \
+                        um alcance de "+S.toPrecision(3)+" m. O tempo de vôo é de "+T.toPrecision(2)+" s.</p>" ;
+            
+                    document.write(str);
+                    
+                </script>
+            </div>  
+        </div>
+    </body>
+
+</html>
+
+

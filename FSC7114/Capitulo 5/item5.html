@@ -1,0 +1,124 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 5</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+            //Matriz A
+            var M_i=2;  //Linha 
+            var M_j=2;  //Coluna 
+            var M_a = [];
+
+            for (i=0;i<M_i;i++) {
+                M_a[i] = [];
+            }
+           
+            M_a[0][0] = 1;  M_a[0][1] = 0; 
+            M_a[1][0] = 1;  M_a[1][1] = -4;  
+            
+
+            //Matriz B
+            
+            var M_b = [];
+            for (i=0;i<M_i;i++) {
+                M_b[i] = [];
+            }
+           
+            M_b[0][0] = 2;  M_b[0][1] = 4; 
+            M_b[1][0] = 1;  M_b[1][1] = 6;  
+           
+
+            //Matriz C,t
+            var M_c = [];
+            var M_t = [];
+            for (i=0;i<2;i++) {
+                M_c[i] = [];
+                M_t[i] = [];
+            } 
+            for (i=0;i<2;i++){
+                for(j=0;j<2;j++){
+                    M_c[i][j]=0;
+                    M_t[i][j]=0;
+                }
+            }
+
+            //Soma
+            for(i=0;i<2;i++){
+                for(j=0;j<2;j++){
+                    M_c[i][j] = M_a[i][j] + M_b[i][j];   
+                }
+            }
+
+            //Transposta
+            for(i=0;i<2;i++){
+                for(j=0;j<2;j++){
+                    M_t[i][j] = M_a[j][i] + M_b[j][i];   
+                }
+            }
+
+            //Determinante de C
+            var Det = M_c[0][0]*M_c[1][1] - M_c[1][0]*M_c[0][1]
+
+
+
+
+            //Print das Matrizes
+            document.write("<pre>");
+            document.write("Matriz A");
+            document.write("<br>")
+            
+            for (var i=0;i<2;i++) {    
+                document.write(M_a[i][0] + "\t" + M_a[i][1] + "\t");
+                document.write("<br>")
+            } 
+            document.write("<br>")
+            document.write("Matriz B");
+            document.write("<br>")
+            
+            for (var i=0;i<2;i++) {    
+                document.write(M_b[i][0] + "\t" + M_b[i][1] + "\t");
+                document.write("<br>")
+            }
+            document.write("<br>")
+            document.write("Soma A + B (Matriz C)");
+            document.write("<br>")
+            
+            for (var i=0;i<2;i++) {    
+                document.write(M_c[i][0] + "\t" + M_c[i][1] + "\t");
+                document.write("<br>")
+            }
+            document.write("<br>")
+            document.write("Transposta de C");
+            document.write("<br>")
+            
+            for (var i=0;i<2;i++) {    
+                document.write(M_t[i][0] + "\t" + M_t[i][1] + "\t");
+                document.write("<br>")
+            }
+            
+            document.write("Determinante de C: ", Det);
+            document.write("<br>")
+         
+            
+            
+            document.write("</pre>");
+
+            
+
+
+                
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

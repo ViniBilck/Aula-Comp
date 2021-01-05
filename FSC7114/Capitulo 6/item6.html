@@ -1,0 +1,57 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 6</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função Ang dos vetores
+                function angVet(Ma,Mb){
+                    
+                    var Mc = Ma[0]*Mb[0] + Ma[1]*Mb[1] + Ma[2]*Mb[2];
+                    var Mod1 = Math.sqrt(Ma[0]*Ma[0] + Ma[1]*Ma[1] + Ma[2]*Ma[2]);
+                    var Mod2 = Math.sqrt(Mb[0]*Mb[0] + Mb[1]*Mb[1] + Mb[2]*Mb[2]);
+                    var Conta = Mc/(Mod1*Mod2);
+                    var AngRad = Math.acos(Conta); //Radianos
+                    var Ang = AngRad*57.29 //Graus
+                    
+                    return Ang
+                }
+
+
+
+                //testando função 
+                var V1 = [1,0,0];
+                var V2 = [0,0,1];
+                var R1 = angVet(V1,V2);
+           
+                document.write("Vetor1: ", V1, "<BR>");
+                document.write("Vetor2: ", V2, "<BR>");
+                document.write("Ang dos vetores: ", R1.toFixed(1), " °");
+               
+
+                
+
+                
+            </script>
+        </div>
+    </center>
+
+    </body>
+
+</html>
+
+
+
+

@@ -1,0 +1,56 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 7</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+           //Aluno: Vinicius Lourival Bilck
+                //Palavras
+                var Ma = ["Tecnológico", "Computadorização","Digitar","Equipamento","Ciências","Script","Eletrodoméstico","Softwares","Informática","Mecanismo","Virtual", "Elétrico","Fisica", "Estudo","Conhecimento","Livro", "Leitura","Desenvolvimento","Matemática","Inovação" ];
+                var Mi =[];
+                //Filtro
+                for (n=0;n<=19;n++){
+                    r = Ma[n].split("");
+                        if (r[0]=="J"){
+                            Mi.push(Ma[n]);
+
+                        } 
+                        if (r[0]=="K"){
+                            Mi.push(Ma[n]);
+
+                        } 
+                        if (r[0]=="L"){
+                            Mi.push(Ma[n]);
+
+                        }  
+                        if (r[0]=="M"){
+                            Mi.push(Ma[n]);
+
+                        }  
+                        if (r[0]=="N"){
+                            Mi.push(Ma[n]);
+
+                        }  
+                }
+                document.write("Palavras: ", Ma,"<BR>");
+                document.write("<BR>");
+                //função sort(), para ordem alfabética.
+                document.write("Palavras em Ordem alfabética : ", Ma.sort(),"<BR>");
+                document.write("<BR>");
+                document.write("Palavras que começam com J,K,L,M,N: ", Mi.sort())
+  
+
+               
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

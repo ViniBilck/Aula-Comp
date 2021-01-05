@@ -1,0 +1,40 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 4</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+           //Aluno: Vinicius Lourival Bilck
+                var Ma = [];
+                var Mb = [];
+                var Mc = [];
+                    for(n=0;n<=2;n++){
+                        //Puxando números Inteiros aleatórios para o vetor a. 
+                        Ma.push(Math.random().toFixed(1)*10);    
+                    }
+                document.write("Matriz A = ","(", Ma,")", "<BR>")
+                    for(n=0;n<=2;n++){
+                        //Puxando números Inteiros aleatórios para o vetor b. 
+                        Mb.push(Math.random().toFixed(1)*10);    
+                    }
+                document.write("Matriz B = ","(", Mb,")","<BR>")
+                 
+                //Produto vetorial
+                Mc = [Ma[1]*Mb[2] - Mb[1]*Ma[2], Ma[2]*Mb[0] - Mb[2]*Ma[0], Ma[0]*Mb[1] - Mb[0]*Ma[1]]
+                    
+                document.write("Matriz AXB = ","(", Mc,")", "<BR>")
+
+               
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

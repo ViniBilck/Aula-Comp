@@ -1,0 +1,71 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 4</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                var A = [];
+                var m = [0,0,0,0];
+
+                //Alunos
+                A[0] = ["Ana", 7.5, 5.0, 9.0];
+                A[1] = ["Júlio", 9.0, 7.0, 8.0];
+                A[2] = ["Paula", 8.0, 6.5, 7.0];
+                A[3] = ["Rita", 5.5, 3.0, 2.5];
+                
+                //Média ponderada 
+                for(i=0;i<=3;i++){
+                    for(j=1;j<=3;j++){
+                        if(j==1){
+                            m[i] = (A[i][j])*4; //Peso 4
+                        }
+                        if(j==2){
+                            m[i] = m[i] + (A[i][j])*3; //Peso 3
+                        }
+                        if(j==3){
+                            m[i] = m[i] + (A[i][j])*3; //Peso 3 
+                        }
+                        
+                    }
+                    m[i] = m[i]/10; //Média
+                    if (m[i]>6){
+                        A[i].push("Aprovado")
+                    }
+                    else{
+                        A[i].push("Reprovado")
+                    }
+
+
+                }
+                
+                
+                
+                
+                document.write("<pre>");
+                document.write("Nomes" + "\t" + "P1" +"\t" + "P2" +"\t" + "P3" +"\t" + "Média" + "\t" + "Status");
+                document.write("<br>") 
+                document.write("<br>") 
+                for (var i=0;i<=3;i++) {    
+                      
+                    document.write(A[i][0] + "\t" + A[i][1] + "\t" + A[i][2] + "\t" + A[i][3] + "\t" + m[i].toFixed(2) + "\t" + A[i][4]);
+                    document.write("<br>")
+                } 
+                document.write("<br>")
+                document.write("P1 tem Peso 4, P2 Peso 3 e P3 Peso 3")
+                document.write("</pre>");
+                
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

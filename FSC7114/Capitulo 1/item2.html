@@ -1,0 +1,28 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+        <title>Item 2</title>
+    <center>
+        <div lang="latex">y = y_{0}\cos(2\pi(\frac{x}{\lambda}-ft))</div>
+        <script>
+            //Aluno: Vinicius Lourival Bilck
+
+            var y = 1.00e-2; // Metros 
+            var f= 1.00e5; //Freq, Hz
+            var l=0.033; //Comp. de onda, m
+            var x=-2.00; // Metros
+            var t=2.00; // tempo, Segundos
+
+            var R = y*Math.cos(2*Math.PI*((x/l)-f*t)); //equação
+            var Resposta = parseFloat(R.toFixed(4)); //Casas decimais
+            var r = Resposta.toPrecision(2); //arredondamento 
+            
+            document.write("<BR>")
+            document.write("Resposta: ", r, " m.")
+            
+        </script>
+    </center>
+    </head>
+
+</html>

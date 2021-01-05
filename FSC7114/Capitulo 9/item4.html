@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<!--Vinicius Lourival Bilck-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>item4</title>
+    <style>
+        p{
+            font-size: 20px;
+            
+        }
+        td{
+            text-align: left;
+            font-size: 20px;
+            
+        }
+        .container {
+            
+            display: block;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+
+
+            }
+        .bloco{
+            height: 200px;
+            width: 800px;
+            background-color: white;
+            margin: auto;
+        }
+        .bloco2{
+            height: 300px;
+            width: 800px;
+            background-color: white;
+            margin: auto;
+        }
+        .blocoR{
+            height: 100px;
+            width: 800px;
+            background-color: white;
+            margin: auto;
+        }
+        body{
+            background-color: #454d55;
+        }
+    </style>
+    <script>
+        var Questoes = [
+            ["Kg","N","Ohm","m/s"],["Luz visível","Ultravioleta","Infravermelho","Raios gama"],["elétrons","fótons","prótons","nêutrons"],["0,2 m","0,02 m","0,0002 m","0,000002 m"],["20 K","29 K","39 K","180 K"]
+        ];
+        var N = 0;
+
+        function nota(){
+                var r0 = document.getElementById("q01");
+                var r1 = document.getElementById("q13");
+                var r2 = document.getElementById("q21");
+                var r3 = document.getElementById("q30");
+                var r4 = document.getElementById("q41");
+                if (r0.checked){
+                    N=N+2;
+                }
+                if (r1.checked){
+                    N=N+2;
+                }
+                if (r2.checked){
+                    N=N+2;
+                }
+                if (r3.checked){
+                    N=N+2;
+                }
+                if (r4.checked){
+                    N=N+2;
+                }
+                var res = document.getElementById('res');
+                res.value = N;
+                N=0;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="bloco">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Questão 1</p>
+                    <p>Qual das seguintes opções é uma unidade de força ?</p>
+                    <script>
+                        for(i=0;i<Questoes[0].length;i++){
+                            var Z = Questoes[0][i];
+                            document.write("<tr>")
+                            document.write("<td><input type='radio' name='q0' id='q0"+i+"' value='"+Z+"'>"+Z+"</td>")
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+        <div class="bloco2">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Questão 2</p>
+                    <p>Todos os dias ficamos expostos a vários tipos de radiações. Seja numa clínica para se realizar um exame com raios X ou simplesmente andando pelas ruas, nosso organismo é constantemente bombardeado por elas. Marque a alternativa que apresenta a radiação de maior penetração no organismo humano.</p>
+                    <script>
+                        for(i=0;i<Questoes[0].length;i++){
+                            var Z = Questoes[1][i];
+                            document.write("<tr>")
+                            document.write("<td><input type='radio' name='q1' id='q1"+i+"' value='"+Z+"'>"+Z+"</td>")
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+
+        <div class="bloco2">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Questão 3</p>
+                    <p>Os raios X são produzidos em tubos de vidro a vácuo, nos quais elétrons sofrem uma brusca desaceleração quando colidem contra um alvo feito de metal. Desta forma podemos dizer que os raios X constituem um feixe de:</p>
+                    <script>
+                        for(i=0;i<Questoes[0].length;i++){
+                            var Z = Questoes[2][i];
+                            document.write("<tr>")
+                            document.write("<td><input type='radio' name='q2' id='q2"+i+"' value='"+Z+"'>"+Z+"</td>")
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+        <div class="bloco2">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Questão 4</p>
+                    <p>O campo elétrico criado por uma carga pontual, no vácuo, tem intensidade igual a 9.10-1 N/C. Calcule a que distância d se refere o valor desse campo. 
+
+                        (dados: Q = -4 pC e ko = 9.109 unidades SI).</p>
+                    <script>
+                        for(i=0;i<Questoes[0].length;i++){
+                            var Z = Questoes[3][i];
+                            document.write("<tr>")
+                            document.write("<td><input type='radio' name='q3' id='q3"+i+"' value='"+Z+"'>"+Z+"</td>")
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+        <div class="bloco2">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Questão 5</p>
+                    <p>O Brasil é reconhecidamente um país de contrastes. Entre eles, podemos apontar a variação de temperatura das capitais brasileiras. Palmas, por exemplo, atingiu, em 1º de julho de 1998, a temperatura de 13 ºC e, em 19 de setembro de 2013, a temperatura de 42 ºC (com sensação térmica de 50 ºC). Na escala Kelvin, a variação da temperatura na capital do Tocantins, entre os dois registros realizados, corresponde a:</p>
+                    <script>
+                        for(i=0;i<Questoes[0].length;i++){
+                            var Z = Questoes[4][i];
+                            document.write("<tr>")
+                            document.write("<td><input type='radio' name='q4' id='q4"+i+"' value='"+Z+"'>"+Z+"</td>")
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+        <div class="blocoR">
+            <table>
+                <tr>
+                    <p style="text-align: center;">Nota</p>
+                    <td><input type="button" value="Sua Nota =" onClick="nota()"><input type="text" value="0" id='res'></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+</body>
+</html>

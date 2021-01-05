@@ -1,0 +1,43 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 1</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Matriz 1xn da velocidade
+                var matvt = []; 
+                var soma = 0
+                //Vou fazer a velocidade para 20 instantes diferentes
+                document.write("Número Analisados: ", "<BR>") 
+                for(var t=0; matvt.length<=19; t+=1){
+                var vt = 9.8*t; //Objrto caindo 
+                matvt.push(vt); // Metros/Segundo
+                document.write(vt.toFixed(2),"<BR>");
+                soma = soma + matvt[t]
+                }
+                
+                var Vmed = soma/matvt.length;
+                document.write("Média: ", Vmed.toFixed(2), "m/s")
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

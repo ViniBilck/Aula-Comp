@@ -1,0 +1,37 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 5</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        var user = window.prompt("Escreva dois números decimais: ")
+        var vetor1 = user.split(",");
+        var Vdeci = [];
+        
+        Vdeci.push(parseInt(vetor1[0],4));
+        Vdeci.push(parseInt(vetor1[1],4));
+        
+
+        var soma = Vdeci[0] + Vdeci[1];
+        var prod = Vdeci[0] * Vdeci[1];
+
+        document.write("<pre>");
+        document.write("Números Quaternários: "+"\t"+"X1= "+vetor1[0]+"\t"+"Y1= "+vetor1[1]+"<BR>");
+        document.write("Números Decimais: "+"\t"+"X1= "+Vdeci[0]+"\t"+"Y1= "+Vdeci[1]+"<BR>");
+        document.write("Soma: "+soma+"<BR>");
+        document.write("Produto: "+prod+"<BR>");
+        document.write("Soma Quaternário: "+soma.toString(4)+"<BR>");
+        document.write("Produto Quaternário: "+prod.toString(4)+"<BR>");
+        document.write("</pre>");
+
+
+
+        
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

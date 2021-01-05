@@ -1,0 +1,51 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                var MaAJ = [];
+                var r =0;
+                var soma = 0;
+
+                document.write("Dada a matriz: ", "<br>")
+                for (i=1;i<=3;i++){
+                    MaAJ[i] = [];
+                    for (j=1;j<=3;j++){
+                        r = 2*i + j;
+                        MaAJ[i][j] = r;
+                    }
+                }
+                for (var i=1;i<=3;i++) {    
+                    for (var j=1;j<=3;j++) {        
+                        document.write(MaAJ[i][j] + " ");
+                    }
+                    document.write("<br>")
+                } 
+
+                soma = MaAJ[1][1] + MaAJ[2][2] + MaAJ[3][3]
+
+                document.write("A soma dos elementos da diagonal é ", soma, "<br>");
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

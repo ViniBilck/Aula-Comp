@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 3</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            .a {
+                width: 250px;
+                height: 50px;
+                display: block;
+
+            }
+           
+        </style>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+    <center>
+        <div class="a" lang="latex">x(t)= x_{0} + v_{0}t + \frac{1}{2}gt^{2} </div>
+        <div class="a" lang="latex">v_{0}=0</div>
+       
+        <div>
+            <script>
+                //Aluno: Vinicius Lourival Bilck
+                var h = window.prompt("Digite a altura em metros que o objeto será solto:\n"+ "Para o Cálculo usando While ");
+                var y = parseFloat(h)
+                if (isNaN(y) || (y<0)){
+                    alert("Altura negativa ou não é uma altura.\n")
+                }
+                else{
+                var g = 9.8; // gravidade
+                var t = 0; // tempo inicial
+                var dt = 0.1; // [s]
+                var yh = y; //[m]
+                //Usando While
+                document.write("Usando While", "<BR>");
+                while (y>0){
+                    document.write("X(t)= ",y.toFixed(2), " m"," || ", "t= ", t.toFixed(2), " s",  "<BR>");
+                    y = yh - (0.5 * g* t**2);
+                    t+=0.1;
+                }
+                }
+                document.write("Chegou ao chão em t= ", t.toFixed(2))
+                
+            </script>
+        </div>
+        <div>
+            <script>
+                //Aluno: Vinicius Lourival Bilck
+                var h = window.prompt("Digite a altura em metros que o objeto será solto:\n" + "Para o Cálculo usando Do ... While ");
+                var y = parseFloat(h)
+                if (isNaN(y) || (y<0)){
+                    alert("Altura negativa ou não é uma altura.")
+                }
+                else{
+                    document.write("Usando Do...While", "<BR>");
+                var g = 9.8; // gravidade
+                var t = 0; // tempo inicial
+                var dt = 0.1; // [s]
+                var yh = y; //[m]
+                //Usando While
+                do{
+                    document.write("X(t)= ",y.toFixed(2), " m"," || ", "t= ", t.toFixed(2), " s",  "<BR>");
+                    y = yh - (0.5 * g* t**2);
+                    t+=0.1;
+                }
+                while (y>0);
+                }
+                document.write("Chegou ao chão em t= ", t.toFixed(2))
+                
+            </script>
+        </div>
+        
+    </center>
+    </body>
+</html>

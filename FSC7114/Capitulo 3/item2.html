@@ -1,0 +1,91 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            .a {
+                width: 250px;
+                height: 50px;
+                display: block;
+
+            }
+           
+        </style>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+    <center>
+        <div class="a" lang="latex">x(t)= A\cos(2\pi ft)e^{-(b/2m)t} </div>
+       
+        <div>
+            <script>
+                //Aluno: Vinicius Lourival Bilck
+                var t = 0;
+                var A = 0.10; // metros
+                var f = 2; // Hz
+                var c1 = -2; // Constante -b/2m
+                document.write("Usando While", "<BR>")
+                //Usando While
+                while (t<=2){
+                    var x = A*Math.cos(2*Math.pi*f*t)*Math.E^(-2*t);
+                    var r = parseFloat(x);
+                    x = 0;
+                    t+=0.1;
+                    document.write("X(t)= ",r," || ", "t= ", t.toFixed(2),  "<BR>");
+                }
+                
+                
+            </script>
+        </div>
+        <div>
+            <script>
+                //Aluno: Vinicius Lourival Bilck
+                var t = 0;
+                var A = 0.10; // metros
+                var f = 2; // Hz
+                var c1 = -2; // Constante -b/2m
+                document.write("Usando Do...While", "<BR>")
+                //Usando Do
+                do {
+                    var x = A*Math.cos(2*Math.pi*f*t)*Math.E^(-2*t);
+                    var r = parseFloat(x);
+                    x = 0;
+                    t+=0.1;
+                    document.write("X(t)= ",r," || ", "t= ", t.toFixed(2),  "<BR>");
+
+                } while (t<=2);
+                
+                              
+            </script>
+        </div>
+        <div>
+            <script>
+                //Aluno: Vinicius Lourival Bilck
+                var n = 0;
+                var t = 0;
+                var A = 0.10; // metros
+                var f = 2; // Hz
+                var c1 = -2; // Constante -b/2m
+                document.write("Usando For", "<BR>");
+                //Usando While
+                for(var n = 0; n<=2; n+=0.1) {
+                    var x = A*Math.cos(2*Math.pi*f*t)*Math.E^(-2*t);
+                    var r = parseFloat(x);
+                    t+=0.1;
+                    document.write("X(t)= ",r," || ", "t= ", t.toFixed(2),  "<BR>")
+
+            }
+                
+            </script>
+        </div>
+        
+       
+    </center>
+    </body>
+
+</html>

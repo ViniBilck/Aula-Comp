@@ -1,0 +1,54 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 4</title>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+
+        str = "";
+        str += "Escolha a função desejada:\n"
+        str += " a. Seno \n"
+        str += " b. Cosseno \n"
+        str += " c. Tangente \n"
+        str += " d. Raiz quadrada \n"
+        str += " e. Exponencial \n"
+
+        var e =prompt(str,"");
+
+        switch (e) {
+            case "a": var r1=prompt("Escreva o Seno. (Em Graus)");
+            var rr = Math.sin(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+            break;
+            case "b": var r1=prompt("Escreva o Cosseno (Em Graus)");
+            var rr = Math.cos(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+            break;
+            case "c": var r1=prompt("Escreva a Tangente (Em Graus)");
+            var rr = Math.tan(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+            break;
+            case "d": var r1=prompt("Escreva a Raiz quadrada");
+            var rr = Math.sqrt(r1);
+            alert("Resposta:\n" + rr.toFixed(2));
+            break;
+            case "e": var r1=prompt("Escreva a Exponencial");
+            var rr = Math.exp(r1);
+            alert("Resposta:\n" + rr.toFixed(2));
+            break;
+            default : alert("Escolha inválida.\n");
+        }
+        
+        
+        
+        
+        </script>
+       
+    </center>
+    </body>
+
+</html>

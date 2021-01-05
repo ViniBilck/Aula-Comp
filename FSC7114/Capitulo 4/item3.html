@@ -1,0 +1,41 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 3</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+           //Aluno: Vinicius Lourival Bilck
+                var Ma = [];
+                var Mb = [];
+                var Mc = [];
+                    for(n=0;n<=2;n++){
+                        //Puxando números Inteiros aleatórios para o vetor a. 
+                        Ma.push(Math.random().toFixed(1)*10);    
+                    }
+                document.write("Matriz A = ","(", Ma,")", "<BR>")
+                    for(n=0;n<=2;n++){
+                        //Puxando números Inteiros aleatórios para o vetor b. 
+                        Mb.push(Math.random().toFixed(1)*10);    
+                    }
+                document.write("Matriz B = ","(", Mb,")","<BR>")
+                 
+                    //Soma vetorial
+                    for(t=0;t<=2;t++){
+                    Mc.push(Ma[t]+Mb[t]);
+                    }
+                document.write("Matriz A+B = ","(", Mc,")", "<BR>")
+
+               
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

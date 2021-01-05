@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--Aluno: Vinicius Lourival Bilck-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        .btn{
+            font-size: 25px;
+        }
+        td{
+            text-align: center;
+            
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+            }
+        .bloco{
+            height: 800px;
+            width: 500px;
+        }
+        body{
+            margin: 0px;
+            background-color: #454d55;
+        }
+    </style>
+    <script>
+        function selecionado() {  
+     
+            if (document.getElementById('sen').checked){
+               var opt01 = parseFloat(document.getElementById('opt1').value);
+               res.value = (Math.sin(opt01*0.0174533)).toFixed(2);
+               
+            }
+            if (document.getElementById('cos').checked){
+               var opt01 = parseFloat(document.getElementById('opt1').value);
+               res.value = (Math.cos(opt01*0.0174533)).toFixed(2);
+               
+            }
+            if (document.getElementById('Tg').checked){
+               var opt01 = parseFloat(document.getElementById('opt1').value);
+               res.value = (Math.tan(opt01*0.0174533)).toFixed(2);
+               
+            }
+            
+            
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="bloco">    
+            <table class="table table-bordered table-dark" >
+                <tr>
+                    <td colspan="3">x = <input class="btn btn-dark" type="text" id="opt1" value="" style="text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn btn-dark" name="col" type="radio" id="sen" onchange="selecionado()">Sen(x)</td>
+                    <td><input class="btn btn-dark" name="col" type="radio" id="cos" onchange="selecionado()">Cos(x)</td>
+                    <td><input class="btn btn-dark" name="col" type="radio" id="Tg"onchange="selecionado()">Tg(x)</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input class="btn btn-dark" type="text" id="res" value=""></td>
+                </tr>
+                
+            </table>
+            <div style="text-align: center; color: white;">*Escreva o X para as funções trigonométricas em graus</div>
+        </div>
+    </div>
+</body>
+</html>
+

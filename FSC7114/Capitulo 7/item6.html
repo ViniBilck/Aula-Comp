@@ -1,0 +1,54 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 6</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        var def = "Olá mundo"
+        var frase = window.prompt("Escreva uma frase: ",def)
+        var palavras = frase.split(" ");
+        var letras = [];
+        var contador = [];
+        
+        for (i=0;i<palavras.length;i++){
+            var x = palavras[i].split("");
+            letras.push(x);
+        }
+        
+        for (i=0;i<16;i++){
+            contador[i]=[];
+            for (j=0;j<palavras.length;j++){
+                contador[i]=[];
+            }
+        } 
+
+        for (i=0;i<letras.length;i++){
+            for (j=1;j<16;j++){
+                if (letras[i].length == j){
+                    contador[j].push(1);
+                }
+            }
+        }
+
+        document.write("<pre>");
+        document.write("A frase: " + "<BR>");
+        document.write(" '" + frase + "' " + "<BR>");
+        document.write("Tem: " + "<BR>");
+        document.write(letras.length +" Palavras" + "<BR>");
+        for (i=1;i<16;i++){
+            document.write(contador[i].length +" Palavras com: "+i+" Letras"+"<BR>");
+        }
+        
+        document.write("</pre>");
+
+
+
+        
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

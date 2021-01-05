@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <!--Vinicius Lourival Bilck-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>item8</title>
+    <style>
+        .bloco{
+            height: 70px;
+            width: 800px;
+            margin: auto;
+        }
+        .bloco2{
+            height: 80px;
+            width: 800px;
+            margin: auto;
+            font-size: 30px;
+            color: white;
+            text-align: left;
+        }
+         .container {
+            
+            display: block;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+         }
+        body{
+            background-color: #454d55;
+        }
+    
+    </style>
+    <script>
+        function plot(){
+            var Entrada = document.getElementById("txt").value;
+            var vetor_N = Entrada.split(',');
+            var graf = document.getElementById('graf');
+            var stg = ""; 
+            for(i=0;i<vetor_N.length;i++){
+                 for(j=0;j<vetor_N[i];j++){
+                    stg = stg + "x";
+                }
+            stg = stg + "<br>";
+            }
+            document.getElementById('grf').innerHTML = stg;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="bloco">
+            <p style="align-text: center; color: white;">Escreva os números que deseja plotar da seguinte forma: 1,2,3,4,5...</p>
+           <input type="text" name="entrada_de_texto" id="txt" value="">    
+        </div>
+        <div class="bloco">  
+            <input type="button" name="plot" id="plotar" value="Plot" onclick="plot()"> 
+        </div>
+        <div class="bloco2">
+            <p id="grf"></p>  
+            
+        </div>
+        <p></p>      
+    </div>
+</body>
+</html>

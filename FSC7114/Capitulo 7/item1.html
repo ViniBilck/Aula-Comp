@@ -1,0 +1,45 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 1</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+
+        var def="1,2,3,4"
+        var vetor1 = [];
+        var vetor2 = [];
+        var vetor_entrada = []
+        var vetor_entrada = window.prompt("Escreva uma sequência de números. Ex.: 1,2,3,4", def);
+        var vetor0 = vetor_entrada.split(",");
+        var N_v = vetor0.length;
+
+
+        for (var i=0;i<N_v;i++){
+            if (isNaN(vetor0[i])){
+            window.alert("Escreva números.");
+            }
+            else{
+                if (i%2 != 0){
+                    vetor2.push(vetor0[i]);
+                }
+                else{
+                    vetor1.push(vetor0[i]);
+                }
+            }
+        }
+
+
+        document.write("<pre>");
+        for (var i=0;i<vetor1.length;i++) {    
+            document.write("X"+ i.toString() + " = " +  vetor1[i]  + "," + "\t" +  "Y"+ i.toString() + " = " + vetor2[i] );
+            document.write("<br>");
+            }
+        document.write("</pre>");
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

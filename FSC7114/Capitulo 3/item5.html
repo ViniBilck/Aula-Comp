@@ -1,0 +1,57 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 5</title>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    </head>
+    <body>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        var vetor_entrada = []
+        var vetor_entrada = window.prompt("Escolha a função desejada:\n" + " a. Seno \n"+" b. Cosseno \n"+ " c. Tangente \n"+" d. Raiz quadrada \n"+" e. Exponencial \n");
+        var vetor1 = vetor_entrada.split("");
+        var N_comp = vetor1.length;
+
+        if (N_comp>1){
+            alert("Escreva um número, a,b,c,d ou e");
+        }
+        if (N_comp==1 && vetor1[0]== "a"){
+            var r1=prompt("Escreva o Seno. (Em Graus)");
+            var rr = Math.sin(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+
+        }
+        if (N_comp==1 && vetor1[0]== "b"){
+            var r1=prompt("Escreva o Cosseno (Em Graus)");
+            var rr = Math.cos(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+
+        }
+        if (N_comp==1 && vetor1[0]== "c"){
+            var r1=prompt("Escreva a Tangente (Em Graus)");
+            var rr = Math.tan(r1*0.0174533);
+            alert("Resposta:\n" + rr.toFixed(2));
+
+        }
+        if (N_comp==1 && vetor1[0]== "d"){
+            var r1=prompt("Escreva a Raiz quadrada");
+            var rr = Math.sqrt(r1);
+            alert("Resposta:\n" + rr.toFixed(2));
+
+        }
+        if (N_comp==1 && vetor1[0]== "e"){
+            var r1=prompt("Escreva a Exponencial");
+            var rr = Math.exp(r1);
+            alert("Resposta:\n" + rr.toFixed(2));
+        }
+
+
+
+        
+        </script>
+       
+    </center>
+    </body>
+
+</html>

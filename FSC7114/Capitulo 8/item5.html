@@ -1,0 +1,44 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <style>
+        .tabela {
+            width: 500;
+            margin: auto;
+        }
+    </style>
+    <head>
+        <title>Item 5</title>
+       
+    </head>
+    <body>
+       <p>
+        <table class="tabela" cellpadding='3' cellspacing='0' border="1">
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        var aluno = new Array(5);
+        aluno[0] = ["08234045", 10,  9, 10,  9.7];
+        aluno[1] = ["08134033",  8,  7,  3,  6.0];
+        aluno[2] = ["09147001",  9,  7,  5,  7.0];
+        aluno[3] = ["09147076",  9,  6,  9,  8.0];
+        aluno[4] = ["08247804",  7,  7,  7,  7.0];
+        
+        str = "<tr><th>Matrícula</th>" + "<th>P1</th>" + "<th>P2</th>" + "<th>P3</th>" + "<th>Média</th></tr>"
+        for (i=0;i<5;i++){
+            str+="<tr>"
+            for(j=0;j<5;j++){
+                str+="<th>"+aluno[i][j]+"</th>"
+            }
+            str+="<tr>"
+        }  
+        
+        
+        document.write(str)
+
+        </script>
+        </table>
+       </p>
+    </body>
+
+</html>
+
+

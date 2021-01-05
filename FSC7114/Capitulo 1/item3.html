@@ -1,0 +1,30 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+        <title>Item 3</title>
+    <center>
+        <div lang="latex">E_{x}=\frac{kqx}{\sqrt{(x^2+y^2+z^2)^3}}, E_{y}=\frac{kqy}{\sqrt{(x^2+y^2+z^2)^3}}, E_{z}=\frac{kqz}{\sqrt{(x^2+y^2+z^2)^3}}</div>
+        <script>
+           //Aluno: Vinicius Lourival Bilck
+
+           var q = 1.602e-19;
+           var k= 8.99e9;
+           const comp = [x=1e-9, y=2e-9, z=3e-9]; //variaveis em nm
+           var eq1 = k*q; // multiplicação de paramettos 
+           var eq2 = x**2+y**2+z**2; 
+           var eq3 = eq1/eq2**(3/2); //Eq completa porem sem a multiplicação das componentes
+           const multi_comp = w => w * eq3; //multiplicada eq3 pelas componentes
+           const r = comp.map(multi_comp);
+
+           document.write("<BR>")
+           document.write("Ex=", r[0].toPrecision(3), " N/C")
+           document.write("<BR>")
+           document.write("Ey=", r[1].toPrecision(3), " N/C")
+           document.write("<BR>")
+           document.write("Ez=", r[2].toPrecision(3), " N/C")
+        </script>
+    </center>
+    </head>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 3</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                var MaAJ = [];
+                var r =0;
+                for (i=1;i<=8;i++){
+                    MaAJ[i] = [];
+                    for (j=1;j<=8;j++){
+                        r = "−";
+                        MaAJ[i][j] = r;
+                    }
+                    
+                }
+                MaAJ[1][1] = "X";
+                MaAJ[2][1] = "X";
+                MaAJ[2][8] = "X";
+                MaAJ[3][1] = "X";
+                MaAJ[3][3] = "X";
+                MaAJ[3][4] = "X";
+                MaAJ[3][5] = "X";
+                MaAJ[3][8] = "X";
+                MaAJ[4][8] = "X";
+                MaAJ[6][4] = "X";
+                MaAJ[6][5] = "X";
+                MaAJ[6][6] = "X";
+                MaAJ[6][8] = "X";
+                MaAJ[7][8] = "X";
+                MaAJ[8][2] = "X";
+                MaAJ[8][3] = "X";
+                MaAJ[8][4] = "X";
+                MaAJ[8][8] = "X";
+
+                document.write("<pre>");
+                for (var i=1;i<=8;i++) {    
+                    for (var j=1;j<=8;j++) {        
+                        document.write(MaAJ[i][j] + " &nbsp;&nbsp; ");
+                    }
+                    document.write("<br>")
+                } 
+                document.write("</pre>");
+                
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

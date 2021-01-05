@@ -1,0 +1,68 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 4</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        var def = "255,24,55";
+        var usuario = []
+        var usuario = window.prompt("Escreva três números de 0 a 255", def);
+        var vetor0 = usuario.split(",");   
+        var vetor1 = [];
+        var hexa = [];
+        var soma = "#";
+        var y=1;
+        
+        while(y != 0){
+            for(i=0;i<3;i++){
+                vetor1.push(parseInt(vetor0[i]))
+                if (isNaN(vetor1[i])){
+                    window.alert("Digite números entre 0 a 255")
+                    y=3
+                    break;
+                }
+                if (vetor1[i]>255) {
+                    window.alert("Digite números entre 0 a 255")
+                    y=3
+                    break;
+
+                }
+                if (vetor1[i]<0) {
+                    window.alert("Digite números entre 0 a 255")
+                    y=3
+                    break;
+                }
+                
+            }
+        if (y==3){
+            break;
+        }
+        y=y-1;
+        }
+        
+        while (y==0){
+            for(i=0;i<3;i++){
+                var x = parseInt(vetor0[i]);
+                hexa.push(x.toString(16));
+                soma=soma + hexa[i]
+            }
+            document.write("<span style='color:"+soma+"'>"+"Essa é a cor gerada pelos seus três números decimais "+"</span>","<BR>");
+            document.write("<span style='color:"+soma+"'>"+soma+"</span>","<BR>")
+            document.write("<span style ='color:"+soma+"; width:200px; height:200px; background-color:"+soma+";display: block;'></span>","<BR>")
+            
+            
+            
+            
+        break;
+        }
+
+
+        
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

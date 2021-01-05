@@ -1,0 +1,50 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 7</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função produto vetorial
+                function prodVet(Ma,Mb){
+                    //Produto vetorial
+                    var Mc = [Ma[1]*Mb[2] - Mb[1]*Ma[2], Ma[2]*Mb[0] - Mb[2]*Ma[0], Ma[0]*Mb[1] - Mb[0]*Ma[1]] 
+                    
+                    return Mc
+                }
+
+                //testando função 
+                var V1 = [3,4,5];
+                var V2 = [1,2,3];
+                var R1 = prodVet(V1,V2);
+           
+                document.write("Vetor1: ", V1, "<BR>");
+                document.write("Vetor2: ", V2, "<BR>");
+                document.write("Produto vetorial: ", R1);
+               
+
+                
+
+                
+            </script>
+        </div>
+    </center>
+
+    </body>
+
+</html>
+
+
+
+

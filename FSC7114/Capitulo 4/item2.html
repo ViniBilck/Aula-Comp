@@ -1,0 +1,65 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+           //Aluno: Vinicius Lourival Bilck
+                //Matriz 1xn da velocidade
+                var matvt = []; 
+                var soma = 0;
+                document.write("Velocidade média para 20 instantes diferentes, a cada 1 segundo: \n")
+
+                //Vou fazer a velocidade para 20 instantes diferentes 
+                for(var t=0; matvt.length<=19; t+=1){
+                var vt = 9.8*t; //Objrto caindo, t [Segundos]
+                matvt.push(vt); // Metros/Segundo
+                soma = soma + matvt[t]
+                }
+                var Vmed = soma/matvt.length;
+                document.write(Vmed.toFixed(2), " m/s", "\n");
+                //Soma de cada elemento de (Vi - Vmed)²
+                desvio = [];
+                var soma2 = 0;
+
+                for(var t=0; t<=19; t+=1){
+                var k = matvt[t] - Vmed;
+                var kquad = k**2;
+                desvio.push(kquad);
+                soma2 = soma2 + desvio[t];    
+                }
+
+                var RaizDaSoma = Math.sqrt(soma2);
+                var Dq = RaizDaSoma/desvio.length;
+
+                document.write("Desvio padrão: ", Dq.toFixed(2));
+
+                //Para todas as médias eu contei o zero como um elemento
+                //pois v(0) = 0 é um elemento para ambos os conjuntos.
+
+
+                
+
+                
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

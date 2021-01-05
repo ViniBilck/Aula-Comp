@@ -1,0 +1,48 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 4</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função Campo
+                function campo(x,y,z){
+                    var k = 8.99e9;
+                    var q = 1.6e-19;
+                    var V = Math.sqrt(x*x + y*y + z*z);
+                    var C = k*q / Math.pow(V, 3);
+                    var CamVet = [C * x , C * y, C * z];
+
+                    return CamVet
+                }
+
+                //testando função 
+
+                var R1 = campo(1,1,1);
+                for (i=0;i<3;i++) {
+                    document.write (R1[i], "<BR>");
+                }
+             
+
+                
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--Aluno: Vinicius Lourival Bilck-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        .btn{
+            font-size: 25px;
+        }
+        td{
+            text-align: center;
+            
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+            }
+        .bloco{
+            height: 800px;
+            width: 500px;
+        }
+        body{
+            margin: 0px;
+            background-color: #454d55;
+        }
+    </style>
+    <script>
+        function operacao(opt){
+            var opt1 = parseFloat(document.getElementById('opt1').value);
+            var opt2 = parseFloat(document.getElementById('opt2').value); 
+            var res = document.getElementById('res');
+            switch (opt){
+                case '+': res.value = (opt1 + opt2).toFixed(2);
+                        break;
+                case '-': res.value = (opt1 - opt2).toFixed(2);
+                        break;
+                case '*': res.value = (opt1 * opt2).toFixed(2);
+                        break;
+                case '/': res.value = (opt1 / opt2).toFixed(2);
+                        break;
+                case 'Sen(x)': res.value = (Math.sin(opt1*0.0174533)).toFixed(2);
+                        break;
+                case 'Cos(x)': res.value = (Math.cos(opt1*0.0174533)).toFixed(2);
+                        break;
+                case 'Log10': res.value = Math.log10(opt1).toFixed(2);
+                        break;
+                case 'LnX': res.value = Math.log(opt1).toFixed(2);
+                        break;
+                case 'Tg(x)': res.value = (Math.tan(opt1*0.0174533)).toFixed(2);
+                        break;
+                case 'raiz': res.value = (Math.sqrt(opt1)).toFixed(2);
+                        break;
+                case 'raiz3': res.value = (Math.sqrt(opt1,3)).toFixed(2);
+                        break;
+                case 'euler': res.value = (Math.E**opt1).toFixed(2);
+                        break;
+                case 'potencia': res.value = (opt1**opt2).toFixed(2);
+                        break;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="bloco">    
+            <table class="table table-bordered table-dark" >
+                
+                <tr>
+                    <td colspan="3">x = <input class="btn btn-dark" type="text" size="3" id="opt1" value="" style="text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">y = <input class="btn btn-dark" type='text' size='3' id='opt2' value='' style="text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn btn-dark" type="button" value="+" onclick="operacao('+')"></td>
+                    <td><input class="btn btn-dark" type="button" value="-" onclick="operacao('-')"></td>
+                    <td><input class="btn btn-dark" type="button" value="&#215;" onclick="operacao('*')"></td>
+                    
+                </tr>
+                <tr>
+                    <td><input class="btn btn-dark" type="button" value="Sen(x)" onclick="operacao('Sen(x)')"></td>
+                    <td><input class="btn btn-dark" type="button" value="Cos(x)" onclick="operacao('Cos(x)')"></td>
+                    <td><input class="btn btn-dark" type="button" value="Tg(x)" onclick="operacao('Tg(x)')"></td>                        
+                </tr>
+                <tr>
+                    <td><input class="btn btn-dark" type="button" value="&#247;" onclick="operacao('/')"></td>
+                    <td><input class="btn btn-dark" type="button" value="&#8730;x" onclick="operacao('raiz')"></td>
+                    <td><input class="btn btn-dark" type="button" value="&#8731;x" onclick="operacao('raiz3')"></td>
+                    
+                </tr>
+                <tr>
+                    <td><input class="btn btn-dark" type="button" value="e" onclick="operacao('euler')"><sup>X</sup></td>
+                    <td><input class="btn btn-dark" type="button" value="Log&#8321&#8320(x)" onclick="operacao('Log10')"></td>
+                    <td><input class="btn btn-dark" type="button" value="Ln(x)" onclick="operacao('LnX')"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input class="btn btn-dark" type="button" value="x" onclick="operacao('potencia')"><sup>y</sup></td>
+                </tr>
+                
+                
+                <tr>
+                    <td colspan="4">Resultado = <input class="btn btn-dark" type="text" size='3' id='res' value='' style="text-align: center;"></td>    
+                </tr>    
+                
+            </table>
+            <div style="text-align: center; color: white;">*Escreva o X para as funções trigonométricas em graus</div>
+        </div>
+    </div>
+</body>
+</html>
+

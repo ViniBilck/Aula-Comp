@@ -1,0 +1,44 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 3</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função Potencial
+                function potencial(x,y,z){
+                    var k = 8.99e9;
+                    var q = 1.6e-19;
+                    var V = (k*q)/Math.sqrt(x*x+y*y+z*z);
+                    
+                    return V
+                }
+
+                //testando função 
+
+                var R1 = potencial(3,4,5);
+                document.write("Potencial: ", R1.toPrecision(2))
+                
+
+                
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

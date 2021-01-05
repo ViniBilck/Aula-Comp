@@ -1,0 +1,48 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center
+            }
+        .box {
+            height: 200px;
+            width: 500px;
+        }
+        body {
+            margin: 0px;
+        }
+        .Letras {list-style-type:lower-latin}
+
+    </style>
+    <head>
+        <title>Item 3</title>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+          </script>
+          <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+          </script>
+       
+    </head>
+    <body>
+        <!-- Fiz com LaTeX pra testar esse método, mas sei utilizar os Entities, para printar sem LaTeX-->
+        <div  class="container">    
+            <div class="box">
+                <ul class="Letras">
+                    <li>$\sin{\left ( A\pm B \right )} = \sin{A}\cos{B} \pm \cos{A}\sin{B} $</li>
+                    <li>$\sin{\theta} = \left ( e^{i\theta} - e^{-i\theta} \right ) / 2i $</li>
+                    <li>$\int a f(x) \, dx = a \int f(x)dx$</li>
+                    <li>$\vec\nabla\times \vec B = \mu_{0}\epsilon_{0}\dfrac{\partial \vec E}{\partial t}$</li>
+                </ul>
+            </div>  
+        </div>
+    </body>
+
+</html>
+
+

@@ -1,0 +1,30 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+        <title>Item 5</title>
+    <center>
+        <div lang="latex">\Psi=\frac{1}{\sqrt{\pi}}\left(\frac{Z}{a_{0}}\right)^\frac{3}{2}e^\frac{-Zr}{a_{0}}</div>
+        <script>
+           //Aluno: Vinicius Lourival Bilck
+
+           var Z = 2;
+           var a0 = 5e-11; //Metros
+           var r=2*a0;
+           var fra1 = 1/Math.sqrt(Math.PI); //Primeira Fração
+           var fra2 = (Z/a0)**(3/2); //segunda Fração
+           var exp=Math.exp((-1*Z*r)/a0); //Exponencial 
+           var resp=fra1*fra2*exp
+           
+
+           document.write("<BR>")
+           document.write("Resposta: ", resp.toPrecision(1), " m^-3/2")
+           
+        </script>
+        
+    </center>
+    </head>
+
+   
+
+</html>

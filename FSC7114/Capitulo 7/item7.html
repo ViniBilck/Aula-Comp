@@ -1,0 +1,114 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 7</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+        
+        //Vou criar uma função para gerar números entre 1 a 4
+        //Para cada número vou atribuir uma letra, que ira ser salva 
+        //em uma memoria de 1 vetor
+        var vet = [];
+        var AA = [];
+        var AAA = [];
+        var AAAA = [];
+        var N="";
+
+        function N_Ale(min, max) {
+            x = Math.random() * (max - min) + min;
+            return parseInt(x);
+        }
+
+        for (t=0;t<100000;t++){
+            N = N_Ale(1,4);
+            if (N==1){
+                N="A";
+                vet.push(N)
+            }
+            if (N==2){
+                N="G";
+                vet.push(N)    
+            }
+            if (N==3){
+                N="T";
+                vet.push(N)
+            }
+            if (N==4){
+                N="C";
+                vet.push(N)
+            }
+        }
+        
+        //Minha validação está meio feia, mas foi a única solução 
+        //que consegui imaginar.
+
+        //Para AA
+        var k = 0;
+        for (t=0;t<vet.length;t++){
+            if(vet[t]==="A"){
+                if(vet[t+1]==="A"){
+                    if(vet[k = t+2]!="A"){
+                        if(vet[k-3]!="A"){
+                            AA.push(1);  
+                        }    
+                    }    
+                }
+            }
+        }
+
+        //Para AAA
+        for (t=0;t<vet.length;t++){
+            if(vet[t]==="A"){
+                if(vet[t+1]==="A"){
+                    if(vet[t+2]==="A"){
+                        if(vet[k = t+3]!="A"){
+                            if(vet[k-4]!="A"){
+                                AAA.push(1);   
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+
+        //Para AAAA
+        for (t=0;t<vet.length;t++){
+            if(vet[t]==="A"){
+                if(vet[t+1]==="A"){
+                    if(vet[t+2]==="A"){
+                        if(vet[t+3]==="A"){
+                            if(vet[k=t+4]!="A"){
+                                if(vet[k-5]!="A"){
+                                AAAA.push(1);   
+                                }    
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+        
+        //Print dos conjuntos:
+
+        document.write("<pre>");
+        document.write("Chamei o vetor que contém a sequência genética de 'vet'" + "<BR>");
+        document.write("Caso queira visualizá-lo no console." + "<BR>");
+        document.write("N = Número de subsequências" + "<BR>");
+        document.write("<BR>");
+        document.write("Dados"+ "\t" + "AA" + "\t" + "AAA" + "\t" + "AAAA" + "<BR>");
+        document.write("N"+ "\t" + AA.length + "\t" + AAA.length + "\t" + AAAA.length + "<BR>");
+        document.write("</pre>");
+        
+       
+
+
+
+        
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

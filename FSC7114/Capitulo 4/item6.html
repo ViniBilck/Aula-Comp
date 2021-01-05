@@ -1,0 +1,39 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 6</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+           //Aluno: Vinicius Lourival Bilck
+                var M_Random = [];
+                
+                //Motando Matriz com números inteiros aleatórios.
+                for(n=0;n<=9;n++){
+                    //Puxando números Inteiros aleatórios. 
+                    M_Random.push(Math.random().toFixed(1)*10); 
+                    
+                }
+                document.write("Números aleatórios entre 0 e 10: ","(",M_Random,")","<BR>")
+                
+                //Tentei fazer uma comparação usando if e a função sort(), mas sem sucesso
+                //Então peguei a função compareFunction junto com sort()
+                //para não ter problemas de falácias do tipo 10<n+1, sendo n+1<9
+                //Fonte: https://www.w3schools.com/jsref/jsref_sort.asp
+                //Parametro: compareFunction
+                
+                M_Random.sort(function(a, b){return a-b});
+                document.write("Números em ordem crescente da função anterior: ","(",M_Random,")")
+
+
+                    
+              
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>

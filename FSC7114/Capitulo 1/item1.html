@@ -1,0 +1,25 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+        <title>Item 1</title>
+    <center>
+        <div lang="latex">x = x_{o} + v_{0}t + \frac{1}{2}at^2</div>
+        <script>
+            //Aluno: Vinicius Lourival Bilck
+
+            var x0 = 3.00; //Ponto inicial  metros
+            var v0= 5.00; //Velocidade inicial m/s
+            var t=2.00; //tempo segundos
+            var a=-9.80; // m/s^2
+
+            var R = x0+(v0*t)+0.5*a*t**2;
+            var r = R.toPrecision(3);
+
+            document.write("<BR>")
+            document.write("Resposta: ", r, " m");
+        </script>
+    </center>
+    </head>
+
+</html>

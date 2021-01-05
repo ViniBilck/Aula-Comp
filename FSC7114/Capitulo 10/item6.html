@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <!--Vinicius Lourival Bilck-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>item6</title>
+    <style>
+        .bloco{
+            height: 70px;
+            width: 800px;
+            margin: auto;
+        }
+         .container {
+            
+            display: block;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+         }
+        body{
+            background-color: #454d55;
+            color: white;
+        }
+    
+    </style>
+    <script>
+        //"<div style='position: relative; left: 100; top: 400;'>X</div> "
+        //O código está meio feio, mas foi o jeito que consegui roda-lo, tinha organizado
+        //de outro modo, mas ele não havia funcionado.
+        
+        function te(){
+            
+            t+=dt
+            var Theta = document.getElementById("Theta").value;
+            var ang_rad= parseFloat(Theta)*0.0174533;
+            var v0 = document.getElementById('v0').value;
+            var vx0 = v0*Math.cos(ang_rad);
+            var vy0 = v0*Math.sin(ang_rad);
+            var x = vx0*t;
+            var y = vy0*t - 0.5*9.8*t**2;
+            var yr = (500 - y)
+            stg = "<div style='position: relative; left: "+x+"px; top: "+ yr +"px;'>&#9762;</div>";
+            document.getElementById('cenario').innerHTML = stg;
+            if (yr>500){
+               clearInterval(interv)
+            }
+           
+            
+            
+        } 
+        function a(){
+            t = 0;
+            interv = setInterval("te()", dt_ms);
+        }  
+        
+        
+        var t=0;
+        var temp = 0;
+        var dt_ms = 16.0;
+        var dt = dt_ms / 1000
+    </script>
+</head>
+<body>
+    v0<input type="text" id="v0" value="100.0">m/s <br/>
+    theta<input type="text" id="Theta" value="45.0">graus <br/>
+    <input type="button" value="Começar" onclick="a()">
+    <div id="cenario" style="margin-left: 2em; border: 1px solid black; width: 500px; height: 500px;">
+        <div style='position: relative; left: 0px; top: 500px;'>X</div> 
+    </div>
+                   
+</body>
+</html>

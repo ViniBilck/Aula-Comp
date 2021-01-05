@@ -1,0 +1,40 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 1</title>
+        <style type="text/css">
+            div {
+                width: 250px;
+                height: 400px;
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+                //Função que pega o Raio e mostra o volumen da esfera
+                function volume(Raio){
+                    var h=2; //Metros
+                    var vol = (4*Math.PI*Raio*Raio)/3;
+                    return vol
+                }
+                var R = window.prompt("Raio em metros da esfera: ");
+                if (R<0) {
+                    window.alert("Escreva um raio positivo");
+                } 
+                document.write("O volume da esfera é ", volume(R).toPrecision(4)," m³")
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

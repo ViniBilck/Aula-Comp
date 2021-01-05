@@ -1,0 +1,79 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+    <center>
+        <script>
+            //Aluno: Vinicius Lourival Bilck
+
+            var opcao1  = window.confirm("Você deseja converter graus Celsius para Kelvin ?");
+                
+                //---------------------------------------------------------
+                //Primeira entrada, se o usuario quer converter Celsius p/ Kelvin
+                //---------------------------------------------------------
+                
+                if (opcao1==true) {
+                    var graus = window.prompt("Escreva a temperatura em graus Celsius");
+                        graus1 = parseFloat(graus);
+                        
+                        //---------------------------------------------------------
+                        //Verificação se o número é aceitavel, definido o Zero absoluto
+                        //---------------------------------------------------------
+                        
+                        if (graus1 < -273.15){
+                            window.alert("Erro! Escreva uma temperatura válida");
+
+                        }
+                        else {
+                            var kelvin1= graus1+273.15;
+                            var kelvin1_resp=  kelvin1.toPrecision(5)
+                    
+                            window.alert(kelvin1_resp + " K");
+                        }
+
+                }
+
+                //---------------------------------------------------------
+                //Segunda entrada, se o usuario quer converter Kelvin p/ Celsius
+                //---------------------------------------------------------
+
+                else {
+
+                    var opcao2 = window.confirm("Você deseja converter Kelvin para graus Celsius ?");
+
+                        if (opcao2==true) {
+                            var kelvin2 = window.prompt("Escreva a temperatura em Kelvin");
+
+                                //---------------------------------------------------------
+                                //Verificação se o número é aceitavel, definido o Zero absoluto
+                                //---------------------------------------------------------
+
+                                if (kelvin2<0){
+                                    window.alert("Erro! Escreva uma temperatura válida");
+
+                                }
+                                else{
+                                    var graus2= kelvin2-273.15;
+                    
+                                    window.alert(graus2.toPrecision(3)+" Graus Celsius");
+
+                                }
+
+                        }
+                        
+                        //---------------------------------------------------------
+                        //Saída das opções
+                        //---------------------------------------------------------
+
+                        else{
+
+                            window.alert("Volte sempre !" );
+                        }
+
+                }
+            
+        </script>
+    </center>
+    </head>
+
+</html>

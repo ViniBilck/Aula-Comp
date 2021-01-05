@@ -1,0 +1,108 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 2</title>
+    <center>
+        <script>
+        //Aluno: Vinicius Lourival Bilck
+
+        var def="123.456.789-10"
+        var vetor1 = []; 
+        var vetor2 = []; 
+        var vetor3 = [];
+        var vetor4 = [];
+        var vetor5 = [];
+        var t = 10;
+        var q = 0;
+        var n = 0;
+        var soma = 0;
+        var soma2 = 0;
+        var r = 0;
+        var vetor_entrada = []
+        var vetor_entrada = window.prompt("Escreva CPF", def);
+        var vetor0 = vetor_entrada.split(".");
+        
+        vetor1.push(vetor0[2].split("-"));
+    
+        vetor2.push(vetor0[0].split(""));
+        vetor2.push(vetor0[1].split(""));
+        vetor2.push(vetor1[0][0].split(""));
+        vetor2.push(vetor1[0][1].split(""));
+        
+        for (i=0;i<3;i++){
+                for (j=0;j<3;j++){
+                    vetor3.push(vetor2[i][j]);
+                }
+            }
+        
+        //Verificação do primeiro digito 
+        
+        var x=1 // Vou usar o X para quebrar o código caso CPF seja falso
+        
+        while (x != 0){
+            while (t>1){
+                vetor4.push(t*vetor3[n]);
+                soma = soma + vetor4[n];
+                n++
+                t=t-1;
+            }
+
+            
+            var dife = (11 - soma%11);
+            var H = soma%11
+
+            if (H<2){
+                if (vetor2[3][0]!= 0){
+                    window.confirm("CPF inválido");
+                    break;
+                }
+            }
+            if (dife != vetor2[3][0]){
+                alert("CPF inválido");
+                break;
+                
+                }
+            
+            //Verificação do segundo digito
+            q=11;
+            n=0;
+            while (q>2){
+                vetor5.push(q*vetor3[n]);
+                soma2 = soma2 + vetor5[n];
+                n++
+                q=q-1;
+            }
+            vetor5.push(2*vetor2[3][0]);
+            soma2=soma2 + vetor5[9];
+
+            var dife2 = (11 - soma2%11);
+
+            var H = soma2%11
+
+            if (H<2){
+                if (vetor2[3][1]!= 0){
+                    alert("CPF inválido");
+                    break;
+                }
+            }
+            if (dife2 != vetor2[3][1]){
+                alert("CPF inválido");
+                break;
+                
+            }
+        x = x-1;
+        break;
+        }
+        while(x==0){
+        window.alert("CPF Válido")
+        break;
+
+        }
+
+        </script>
+    </center>
+    </head>
+
+</html>
+
+

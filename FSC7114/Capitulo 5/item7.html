@@ -1,0 +1,99 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 7</title>
+    </head>
+    <body>
+    <center>
+        <div>
+            <script>
+            //Aluno: Vinicius Lourival Bilck
+            //declaração de Vars
+            var n = 5;
+            var part = [];
+            var R_carg = 0;
+            var R_mass = 0;
+            var cnt1 = 0;
+            var cnt2 = 0;
+            var px = 0;
+            var py = 0;
+            var pz = 0;
+            var P = 0;
+            var cont = 0;
+            //--------------------
+            //Matriz
+            for(i=0;i<n;i++){
+                part[i]=[];
+                part[i][2]=[];
+            }
+            
+            //Carga e Massa aleatoria, o único jeito que consegui pensar, 
+            //meio que gerar um numero aleatorio entre 0 e 1, ai para ter a mesma probabilidade de massa
+            //fiz se o número gerado for menor que 0.5, tem 50% de ser 1 e se for maior, tem 50% de ser 2
+            //já no outro caso eu dividi 1 em 6 partes, então se vier um número menor que 0.16, é 16% de chance
+            //senão é o resto, que é 5 vezes maior, mais de 80% de chance.
+            //Não tenho total certeza se realmente funciona essa probabilidade no código, mas matematicamente 
+            //pra mim faz sentido.
+            //Coloquei no For para gerar para cada particula 
+            
+            for (i=0;i<n;i++){
+                    R_carg = 0;
+                    R_mass = 0;
+                    cnt1 = Math.random();
+                    if (cnt1<0.5){
+                        R_mass = 1               
+                    }
+                    else{
+                        R_mass = 2
+                    }
+                    
+                    cnt2 = Math.random();
+                    if (cnt2<0.16){
+                        R_carg = 2               
+                    }
+                    else{
+                        R_carg = 1
+                    }
+                    while (P != 1){
+                    px = Math.random();
+                    py = Math.random();
+                    pz = Math.random();
+                    P = Math.sqrt(px.toPrecision(2)*px.toPrecision(2)+py.toPrecision(2)*py.toPrecision(2)+pz.toPrecision(2)*pz.toPrecision(2));
+                    cont++
+                    
+                    //Meu, achei muito legal isso, 
+                    //e fiquei interresado em quantas vezes o while rodou
+                    //Até satisfazer a equação, vou printar no html
+
+                    }
+
+                    part[i][0] = R_mass;
+                    part[i][1] = R_carg;
+                    part[i][2] = [px.toPrecision(2),py.toPrecision(2), pz.toPrecision(2)];
+                    
+
+
+                }
+                document.write("<pre>");
+                document.write( "------------" + "\t" + "Massa" + "\t" + "Carga" + "\t" + "x" + "\t" + "y" + "\t" + "z" + "\t" );
+                document.write("<br>");
+                for (var i=0;i<5;i++) {    
+                    document.write("Particula ", i,": " + "\t" + part[i][0] + "\t" + part[i][1] + "\t" + part[i][2][0] + "\t" + part[i][2][1] + "\t" + part[i][2][2] + "\t" );
+                    document.write("<br>");
+                }
+                document.write("<br>");
+                document.write("Vezes que o código rodou até satisfazer |P|=1: ",cont)
+                document.write("</pre>");
+                       
+                
+
+            </script>
+        </div>
+    </center>
+    </body>
+
+</html>
+
+
+
+

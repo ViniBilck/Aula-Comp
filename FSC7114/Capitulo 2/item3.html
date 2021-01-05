@@ -1,0 +1,92 @@
+<html>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <title>Item 3</title>
+    <center>
+        <script>
+            //Aluno: Vinicius Lourival Bilck
+
+                //Declarando primeiro vetor
+
+                var def="1,2,3"
+                var vetor_entrada = []
+                var vetor_entrada = window.prompt("Escreva as componentes do primeiro vetor. Ex.: 1,2,3", def);
+                var vetor1 = vetor_entrada.split(",");
+                var N_comp = vetor1.length;
+
+                //---------------------------------------------------------
+                //Inicio da verificação, se o vetor escrito é valido ou não 
+                //---------------------------------------------------------
+
+                if ( 3 > N_comp > 3){ 
+                    window.alert("Escreva um vetor com 3 componentes")
+
+                 }
+
+                 if (isNaN(vetor1[0]||vetor1[1]||vetor1[2])) { 
+                     window.alert("Vetor escrito incorretamente");
+     
+                }
+                 if (isNaN(vetor1[0]&&vetor1[1]&&vetor1[2])){ 
+                   window.alert("Vetor escrito incorretamente");
+     
+                 }
+                 if (isNaN(vetor1[1])){
+                    window.alert("Vetor escrito incorretamente");
+                 }  
+
+                 //---------------------------------------------------------
+                 //Fim da verificação
+                 //---------------------------------------------------------
+
+                 //Declarando segundo vetor
+
+                var def="1,2,3"
+                var vetor_entrada_2 = []
+                var vetor_entrada_2 = window.prompt("Escreva as componentes do segundo vetor. Ex.: 1,2,3", def);
+                var vetor2 = vetor_entrada_2.split(",");
+                var N_comp = vetor2.length;
+
+                //---------------------------------------------------------
+                //Inicio da verificação, se o vetor escrito é valido ou não 
+                //---------------------------------------------------------
+
+                if ( 3 > N_comp > 3){ 
+                    window.alert("Escreva um vetor com 3 componentes")
+
+                 }
+
+                 if (isNaN(vetor2[0]||vetor2[1]||vetor2[2])) { 
+                     window.alert("Vetor escrito incorretamente");
+     
+                }
+                 if (isNaN(vetor2[0]&&vetor2[1]&&vetor2[2])){ 
+                   window.alert("Vetor escrito incorretamente");
+     
+                 }
+                 if (isNaN(vetor2[1])){
+                    window.alert("Vetor escrito incorretamente");
+                 }  
+
+                 //---------------------------------------------------------
+                 //Fim da verificação
+                 //---------------------------------------------------------
+
+                 //INICIO DOS CÁLCULOS 
+
+                 v1_v2=vetor1[0]*vetor2[0]+vetor1[1]*vetor2[1]+vetor1[2]*vetor2[2] ; //Produto escalar
+                 v1Xv2=[vetor1[1]*vetor2[2]-vetor2[1]*vetor1[2] , vetor1[2]*vetor2[0]-vetor2[2]*vetor1[0] , vetor1[0]*vetor2[1]-vetor2[0]*vetor1[1] ] //Produto vetorial
+
+                 //Fim dos Cálculos
+
+                 window.alert("o produto escalar entre os vetores 1 e 2: " + "\n" + v1_v2 );
+                 window.alert("O vetor 3 gerado pela multiplicação vetorial: " + "\n"  + v1Xv2);
+                 
+                 
+        </script>
+    </center>
+    </head>
+
+</html>
+
+
