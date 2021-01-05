@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item2</title>
+</head>
+<body>
+    <p style="text-align: center;">
+        <canvas id="tela" height="300px"; width= "150px"; style="border: 1px solid black;" ></canvas>
+    </p>   
+    <script>
+        
+
+        //Desenhar
+        function Draw(){
+            ctx.clearRect(xmin,ymin, xmax-xmin,ymax-ymin)
+            //eixo
+            ctx.lineWidth = 0.005;
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            ctx.moveTo(0, H);
+            ctx.lineTo(0, H - 1.1*L);
+            ctx.stroke();
+
+            //arco
+            ctx.lineWidth = 0.005;
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            var t1 = 1.5 * Math.PI - amp;
+            var t2 = 1.5 * Math.PI + amp;  
+            ctx.arc(0, H, L, t1, t2);
+            ctx.stroke()
+
+            //Haste
+            ctx.lineWidth = 0.008;
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            ctx.moveTo(0, H);
+            ctx.lineTo(x,y);
+            ctx.stroke();
+
+            //Esfera
+            ctx.lineWidth = 0.005;
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            var t1 = 1.5 * Math.PI - amp;
+            var t2 = 1.5 * Math.PI + amp;  
+            ctx.arc(x, y, r, 0, 2*Math.PI);
+            ctx.fill()
+
+
+        }
+        function fisica(){
+            var t = (Date.now() - t_ini)/100;
+            var theta = amp * Math.cos(omega * t);
+            x = L * Math.sin(theta);
+            y = H - L * Math.cos(theta);
+
+        }
+
+       
+            function atualiza(){
+            fisica();
+            Draw();
+        }
+        
+
+        //Canvas config
+        var cnv = document.getElementById("tela");
+        var ctx = cnv.getContext("2d");
+        var cw = cnv.width;
+        var ch = cnv.height;
+
+        var xmin = -0.5;
+        var xmax = 0.5;
+        var ymin = 0.0;
+        var ymax = 2.0;
+        var escala_h = cw / (xmax - xmin);
+        var escala_v = -ch /(ymax - ymin);
+        var dx = - escala_h * xmin;
+        var dy = - escala_v * ymax;
+        ctx.setTransform(escala_h, 0,0,escala_v,dx,dy)
+
+        //Propriedades do sistema físico
+        var H = 2.0; 
+        var L = 1.5;
+        var G = 9.8;
+        var omega = Math.sqrt(G / L);
+        var r = 0.05;
+        var amp = 10* Math.PI / 180.0;
+
+        //Sitema Físico
+        var x = 0;
+        var y = 0;
+        var t_ini = Date.now();
+        //----------------------
+
+        var interv = setInterval("atualiza()",16);
+        
+
+    </script>
+</body>
+</html>
