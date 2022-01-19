@@ -1,5 +1,5 @@
 # Exercicios de FSC7114
-Aqui estão todos os arquivos feitos na aula de Introdução à Física Computacional.
+Aqui estão todos os arquivos feitos respodidos por mim durante a matéria de Introdução à Física Computacional.
 
 ## Projeto - Interpretação gráfica da Série de Fourier
 O projeto consiste em utilizar das ferramentas apresentadas no livro "Física com Javascript", para elelaboração de um script que vise mostrar alguma simulação física ou matématica com um usuário pelo navegador, utilizando Javascript, CSS e HTML.
